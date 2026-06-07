@@ -1,3 +1,215 @@
-<a href="#" class="btn">Iniciar Módulo</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Aprendizaje Moderno</title>
+    <style>
+        /* Variables de diseño para facilitar cambios de color */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --background-color: #f8fafc;
+            --text-color: #1e293b;
+            --card-bg: #ffffff;
+        }
 
-<a href="clase1.html" class="btn">Iniciar Módulo</a>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Barra de Navegación */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Sección Principal (Hero) */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #475569;
+            margin-bottom: 2rem;
+        }
+
+        /* Contenedor de Contenido */
+        .main-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Rejilla de Cursos/Módulos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Adaptabilidad para Pantallas Pequeñas */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* En un proyecto real aquí se programaría un menú hamburguesa */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">EduModerna</a>
+            <ul class="nav-links">
+                <li><a href="#modulos">Módulos</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Aprende a tu propio ritmo</h1>
+            <p>Bienvenido a la nueva versión de nuestra plataforma de aprendizaje. Contenido optimizado, estructurado y accesible desde cualquier dispositivo.</p>
+            <a href="#modulos" class="btn">Explorar Contenido</a>
+        </div>
+    </section>
+
+    <main class="main-container">
+        <h2 id="modulos" style="text-align: center; margin-bottom: 1rem;">Módulos de Aprendizaje</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>01. Fundamentos Básicos</h3>
+                <p>Introducción general a los conceptos clave. Ideal para comenzar desde cero con explicaciones sencillas y ejemplos prácticos.</p>
+                <a href="#" class="btn">Iniciar Módulo</a>
+            </div>
+
+            <div class="card">
+                <h3>02. Conceptos Intermedios</h3>
+                <p>Profundización en la lógica, estructuras y análisis de casos reales. Desarrolla tus habilidades analíticas.</p>
+                <a href="#" class="btn">Iniciar Módulo</a>
+            </div>
+
+            <div class="card">
+                <h3>03. Optimización y Práctica</h3>
+                <p>Ejercicios avanzados y casos de estudio complejos para dominar por completo la materia de estudio.</p>
+                <a href="#" class="btn">Iniciar Módulo</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Plataforma Educativa Moderna. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
