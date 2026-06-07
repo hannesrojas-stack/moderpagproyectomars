@@ -1,2 +1,2 @@
 # moderpagproyectomars
-Modernización de la pagina web educativa viaje a marte
+Modernización de la pagina web educativa sobre el rover de la nasa Perseverance
